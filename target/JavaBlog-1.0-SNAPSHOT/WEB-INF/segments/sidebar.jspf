@@ -1,0 +1,33 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<section id="sidebar">
+    <div id="contact-section">
+        <a href="https://www.linkedin.com/in/ryszard-urbanek-1b4046238/" class="contact-link">
+            <i class="fa-brands contact-icon fa-linkedin"></i>
+            <p class="contact-text">Linkedin</p>
+        </a>
+        <a href="https://github.com/RyszardUrbanek" class="contact-link">
+            <i class="fa-brands contact-icon fa-github-square"></i>
+            <p class="contact-text">Github</p>
+        </a>
+        <a href="mailto:Ryszard-Urbanek123@wp.pl" class="contact-link">
+            <i class="fa-solid contact-icon fa-square-envelope"></i>
+            <p class="contact-text">Ryszard-Urbanek123@wp.pl</p>
+        </a>
+        <a href="tel:+48 507 938 609" class="contact-link">
+            <i class="fa-solid contact-icon fa-square-phone-flip"></i>
+            <p class="contact-text">+48 507 938 609</p>
+        </a>
+    </div>
+    <div id="contents">
+        <p id="contents-header">Contents</p>
+        <c:forEach var="contests" items="${requestScope.contents}">
+            <div class="contents-child">
+                <p class="contents-category"><c:out value="${contests.key}"/> </p>
+                <c:forEach var="post" items="${contests.value}">
+                    <a class="contents-post-link" href="${pageContext.request.contextPath}/post${post.url}"><p class="contests-post-label"><c:out value="${post}" /></p></a>
+                </c:forEach>
+            </div>
+        </c:forEach>
+        <div id="contents-spacer"></div>
+    </div>
+</section>

@@ -1,0 +1,22 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<nav id="navbar">
+    <a href="${pageContext.request.contextPath}/" id="logo">
+        JavaBlog
+    </a>
+    <div id="navbar-items">
+        <a href="../views/user-panel.jsp" class="item">About</a>
+        <hr>
+        <c:choose>
+            <c:when test="${empty pageContext.request.userPrincipal}">
+                <a href="${pageContext.request.contextPath}/login" class="item">Sign in</a>
+                <a id="main-link" href="${pageContext.request.contextPath}/register" class="item">Sign up</a>
+            </c:when>
+        </c:choose>
+        <c:choose>
+            <c:when test="${not empty pageContext.request.userPrincipal}">
+                <a href="${pageContext.request.contextPath}/settings" class="item">Settings</a>
+                <a id="main-link" href="${pageContext.request.contextPath}/logout" class="item">Log out</a>
+            </c:when>
+        </c:choose>
+    </div>
+</nav>

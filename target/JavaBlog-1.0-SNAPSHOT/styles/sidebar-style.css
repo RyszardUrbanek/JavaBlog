@@ -1,0 +1,123 @@
+#sidebar {
+    width: 30%;
+    height: 200px;
+    margin-left: auto;
+    border-top: 0.1px lightgray solid;
+    border-bottom: 0.1px lightgray solid;
+}
+
+#contact-section {
+    border-left: 0.1px lightgray solid;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    text-decoration: none;
+    color: black;
+}
+
+.contact-icon {
+    margin: 0 10px 0 40px;
+}
+
+.contact-text {
+    margin: 0 0 -1px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+}
+
+.contact-text:hover {
+    color: #9D5C63;
+}
+
+#contents {
+    border-left: 0.1px lightgray solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.1px lightgray solid;
+    gap: 40px;
+}
+
+#contents-spacer {
+    height: 0;
+    width: 100%;
+}
+
+#contents-header {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.contents-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    height: 100%;
+    gap: 10px;
+}
+
+.contents-category {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    font-size: 16px;
+}
+
+.contests-post-label {
+    margin: 0;
+}
+
+.contents-post-link {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 12px;
+    margin: 0 0 0 0;
+    text-decoration: none;
+    color: black;
+}
+
+.contents-post-link:hover {
+    text-decoration: underline;
+    color: #9D5C63;
+}
+
+@media only screen and (max-width: 960px) {
+    .contact-text {
+        display: none;
+    }
+
+    #contact-section {
+        align-items: center;
+    }
+
+    .contact-icon {
+        margin: 0;
+    }
+
+    .contact-icon:hover {
+        color: #9D5C63;
+    }
+
+    #sidebar {
+        width: 10%;
+    }
+
+    #contents {
+        display: none;
+    }
+}

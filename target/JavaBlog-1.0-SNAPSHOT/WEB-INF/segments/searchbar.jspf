@@ -1,0 +1,19 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<section id="filter-section">
+    <form id="searchbar" method="get" action="${pageContext.request.contextPath}/search">
+        <input placeholder="Search..." spellcheck="false" title="Search" type="text" name="s" id="searchbar-input">
+        <button id="searchbar-submit" title="Submit" type="submit"><i class="fa-solid search-icon fa-magnifying-glass fa-xl"></i></button>
+        <select name="date" title="Sort by date" id="date-filter">
+            <option value="0">Data dodania</option>
+            <option value="1">Od najnowszych</option>
+            <option value="2">Od najstarszych</option>
+        </select>
+        <select name="category" title="Categories" id="category-filter">
+            <option value="0">Kategoria</option>
+            <c:forEach var="category" items="${requestScope.categories}">
+                <c:set var="description" value="${category.description}"/>
+                <option value="${category.name}" title="${description}"><c:out value="${category.name}"/></option>
+            </c:forEach>
+        </select>
+    </form>
+</section>

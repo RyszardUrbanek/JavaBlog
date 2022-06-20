@@ -1,0 +1,135 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+#spacer {
+    height: 150px;
+    width: 100%;
+}
+
+#main-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+#main-container {
+    width: 65%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#post-container {
+    width: 70%;
+}
+
+@media only screen and (max-width: 1280px) {
+    #main-container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    #main-container {
+        width: 90%;
+    }
+
+    #post-container {
+        width: 90%;
+    }
+}
+
+.post {
+    width: 100%;
+    border-top: 0.1px lightgray solid;
+    border-right: 0.1px lightgray solid;;
+}
+
+.post * {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.post-title {
+    color: #292323;
+    font-size: 30px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-family: 'Patua One', cursive;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.post-info {
+    font-family: 'Alegreya', serif;
+    font-size: 13px;
+}
+
+.post-link {
+    margin-left: auto;
+    color: black;
+}
+
+.post-intro {
+    font-family: 'Alegreya', serif;
+}
+
+.post-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+.post-vote-link {
+    margin: 0;
+    color: black;
+}
+
+.like {
+    margin: 0 0 0 20px;
+}
+
+.dislike {
+    margin: 0 0 0 30px;
+}
+
+.like-number {
+    display: inline;
+    margin: 0;
+    font-family: 'Patua One', cursive;
+}
+
+.dislike-number {
+    display: inline;
+    margin: 0;
+    font-family: 'Patua One', cursive;
+}
+
+.rating-icon {
+    margin: 0;
+}
+
+.rating-icon:hover {
+    color: #9D5C63;
+}
+
+.arrow-link-spacer {
+    width: 20px;
+    margin: 0;
+}

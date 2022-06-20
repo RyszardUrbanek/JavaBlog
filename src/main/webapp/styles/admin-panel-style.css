@@ -1,0 +1,57 @@
+#new-post-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.new-post-element-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.new-post-label {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 12px;
+}
+
+.new-post-input {
+    resize: none;
+    border: none;
+    background-color: whitesmoke;
+    width: 100%;
+}
+
+.new-post-input:focus {
+    outline: none;
+}
+
+#post-title-input {
+    height: 17px;
+}
+
+#post-description-input, #post-content-input {
+    height: 150px;
+}
+
+#post-submit-button {
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: #9D5C63;
+    color: white;
+}
+
+#post-submit-button:hover {
+    background-color: #b76d68;
+}
+
+#post-submit-button:active {
+    background-color: #d17d77;
+}
+
+#new-post-view {
+    display: none;
+}
